@@ -5,7 +5,7 @@ const fs = require('fs');
 const exec = util.promisify(require('child_process').exec);
 const cronJob = require("cron").CronJob;
 
-console.log('Mastodon Bot Running...')
+console.log('Welcome to your Mastodon Bot :D')
 
 const M = new Mastodon({
     client_key: process.env.CLIENT_KEY,
