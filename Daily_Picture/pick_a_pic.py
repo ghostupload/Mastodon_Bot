@@ -1,6 +1,6 @@
 import os, shutil, datetime, fileinput
 
-def jpg(dir):
+def nicepath(dir):
     "①文件夹存在②有jpg③有list④list不为空，都满足则返回1"
     if os.path.exists(dir) & os.path.exists(dir + '/list.txt'):
         imgFile = os.listdir(dir)
@@ -16,12 +16,12 @@ os.chdir(workPath)
 
 # Step 1: 确定原图路径：
 
-if jpg('special')==1:    # 优先选special
+if nicepath('special')==1:    # 优先选special
     imgDir = '/special/'
 else:   # 其次选对应的纪念日（文件夹名格式为MMDD）
     t = datetime.datetime.now()
     dateDir = t.__format__('%m%d')
-    if jpg(dateDir)==1:
+    if nicepath(dateDir)==1:
         imgDir = '/' + dateDir + '/'
     else:
         imgDir = '/screenshots/'    # 不符合特殊条件就选默认文件夹
