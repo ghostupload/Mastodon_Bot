@@ -10,7 +10,7 @@
         "pid_file": "pids/daily_pic.pid",
         "min_uptime": "60s",
         "max_restarts": 15,
-        "max_memory_restart": "100M"
+        "max_memory_restart": "256M"
       }
     ]
   }
