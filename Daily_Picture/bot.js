@@ -32,8 +32,7 @@ new cronJob(
 
 async function toot() {
     // Step 1 Random Pick
-    const pyResponse = await exec(pick_a_pic);
-    const alt = pyResponse.stdout;    //获取python输出的图片描述
+    const alt = (await exec(pick_a_pic)).stdout;    //获取文件名作为图片描述
 
     // Step 2 Upload
     const mediaContent = {
